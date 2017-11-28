@@ -1,7 +1,11 @@
 from node
 
-EXPOSE 3000
-RUN yarn install
-ADD ./ /
+WORKDIR /usr/src/app
 
-CMD node index.js
+COPY package*.json ./
+RUN yarn install
+COPY . .
+
+EXPOSE 3000
+
+CMD ["node",  "index.js"]
