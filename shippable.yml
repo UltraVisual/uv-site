@@ -1,0 +1,5 @@
+build:
+  ci:
+    - docker build -t cloud.canister.io:5000/ultravisual/ultravisual-site:$BRANCH.BUILD_NUMBER .
+    - docker tag cloud.canister.io:5000/ultravisual/ultravisual-site:$BRANCH.BUILD_NUMBER cloud.canister.io:5000/ultravisual/ultravsual-site:latest
+    - docker push cloud.canister.io:5000/ultravisual/ultravisual-site:latest
