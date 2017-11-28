@@ -1,5 +1,5 @@
 build:
   ci:
-    - docker login --username=ultravisual --password=clubroom25 cloud.canister.io:5000
+    - docker login --username=ultravisual --password=clubroom25 repo.treescale.com
     - docker build -t cloud.canister.io:5000/ultravisual/ultravisual-site:0.0.1 .
     - docker push cloud.canister.io:5000/ultravisual/ultravisual-site:0.0.1
