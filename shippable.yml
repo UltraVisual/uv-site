@@ -2,4 +2,5 @@ build:
   ci:
     - docker login --username=ultravisual --password=clubroom25 repo.treescale.com
     - docker build -t repo.treescale.com/ultravisual/ultravisual-site:0.0.1 .
+    - docker tag repo.treescale.com/ultravisual/ultravisual-site:0.0.1 repo.treescale.com/ultravisual/ultravisual-site:latest
     - docker push repo.treescale.com/ultravisual/ultravisual-site:0.0.1
