@@ -4,5 +4,5 @@ build:
     - docker push repo.treescale.com/ultravisual/ultravisual-site:0.0.1
 integrations:
   hub:
-    - integrationName: treescale
-      type: dockerLogin
+    - integrationName: treescale-integration
+      type: dockerRegistryLogin
