@@ -1,7 +1,13 @@
+env:
+  global:
+    - DOCKER_REPO=repo.treescale.com/ultravisual
+    - ARTIFACT=ultravisual-site
 build:
   ci:
-    - docker build -t repo.treescale.com/ultravisual/ultravisual-site:0.0.1 .
-    - docker push repo.treescale.com/ultravisual/ultravisual-site:0.0.1
+    - docker build -t $DOCKER_REPO/$ARTIFACT:latest .
+    - docker tag $DOCKER_REPO/$ARTIFACT:latest $DOCKER_REPO/$ARTIFACT:0.0.$SHIPPABLE_BUILD_NUMBER
+    - docker push $DOCKER_REPO/$ARTIFACT:latest
+    - docker push $DOCKER_REPO/$ARTIFACT:0.0.$SHIPPABLE_BUILD_NUMBER
 integrations:
   hub:
     - integrationName: treescale-integration
