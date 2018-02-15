@@ -224,9 +224,6 @@ button, input, select, textarea {
     margin: 0;
 }
 
-input:valid, textarea:valid {
-}
-
 input:invalid, textarea:invalid {
     border-radius: 1px;
     -moz-box-shadow: 0px 0px 5px red;
@@ -339,9 +336,9 @@ a:hover {
     zoom: 1;
 }
 
-.shadowed-header-image {
-    height: 265px;
-    background: url("../imgs/shadow-large.png") bottom;
+.about-me p:first-child {
+    height: 258px;
+    background: url("/imgs/shadow-large.png") bottom;
     background-repeat: no-repeat;
 }
 
@@ -441,7 +438,7 @@ ul.box li.med:before {
     width: 100%;
     height: 100%;
     right: 0.8px;
-    background: url("../imgs/shadow-sml.png") center bottom no-repeat;
+    background: url("/imgs/shadow-sml.png") center bottom no-repeat;
 }
 .error-box
 {
@@ -462,14 +459,14 @@ ul.box li.med:before {
     margin: 10px;
     float: left;
     border: none;
-    background: url("../imgs/twitter_sheet.png") no-repeat;
+    background: url("/imgs/twitter_sheet.png") no-repeat;
     width: 160px;
     height: 164px;
     overflow: hidden;
 }
 
 #twitter_icon:hover {
-    background: url("../imgs/twitter_sheet.png") no-repeat -162px;
+    background: url("/imgs/twitter_sheet.png") no-repeat -162px;
 }
 
 .boxshadow .post, .boxshadow #primary, .boxshadow #secondary, .boxshadow #comments, .boxshadow #page-content {
@@ -483,49 +480,37 @@ ul.box li#last {
     min-height: 240px;
 }
 
-ul.box li#last:before
-{
+ul.box li#last:before {
     bottom: -40px;
     content: '';
     z-index: -1;
     width: 100%;
     height: 100%;
     right: 0.8px;
-    background: url("../imgs/shadow_med.png") center bottom no-repeat;
+    background: url("/imgs/shadow_med.png") center bottom no-repeat;
     position: absolute;
 }
 
-.shadowed
-{
+.shadowed  {
     margin-bottom: 0 !important;
 }
 
-.content-shadow
-{
+.content-shadow {
     z-index: -2;
     height: 44px;
-    background: url("../imgs/shadow-large.png") center bottom no-repeat;
+    background: url("/imgs/shadow-large.png") center bottom no-repeat;
 }
 
-/*.boxshadow ul.box li#last:after {
-
-    -webkit-transform: skew(11deg) rotate(2deg);
-    -moz-transform: skew(11deg) rotate(2deg);
-    -ms-transform: skew(11deg) rotate(2deg);
-    -o-transform: skew(11deg) rotate(2deg);
-    transform: skew(11deg) rotate(2deg);
+.main-content p {
+    text-align: center;
+    padding-left: 0;
 }
 
-.boxshadow ul.box li:after {
-    left: auto;
-    right: 10px;
-    bottom: 12px;
-    -webkit-transform: skew(13deg) rotate(4deg);
-    -moz-transform: skew(13deg) rotate(4deg);
-    -ms-transform: skew(13deg) rotate(4deg);
-    -o-transform: skew(13deg) rotate(4deg);
-    transform: skew(13deg) rotate(4deg);
-}*/
+img[alt="profile"] {
+    margin-bottom: 0 !important;
+    background: url(/imgs/shadow-large.png) bottom;
+    background-repeat: no-repeat;
+}
 
 #tweets {
     padding: 10px 10px;

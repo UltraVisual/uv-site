@@ -6,7 +6,7 @@ ULTRAVISUAL.twitterFeed = function(e) {
     }
     var $container = $('#tweets');
     $container.fadeOut(1000);
-    $.getJSON("http://ultravisual.co.uk/tweets/index.php",
+    $.getJSON("/tweets",
                 function(data) {
                     var html = "<br />";
                     $.each(data, function(key, val) {
@@ -45,3 +45,9 @@ ULTRAVISUAL.twitterFeed = function(e) {
                     $container.fadeIn(1000);
                 })
 };
+
+(function($) {
+    $(function() {
+        ULTRAVISUAL.twitterFeed();
+    });
+}(jQuery));

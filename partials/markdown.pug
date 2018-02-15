@@ -1,0 +1,7 @@
+extend layout
+
+block content
+        .main-content
+            h1= markdownFile.meta.title
+            div(class=markdownFile.meta.pageClass)
+                != markdownFile.parseContent()
