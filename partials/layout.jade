@@ -1,0 +1,55 @@
+doctype html
+html(lang="en-GB")
+    head
+        title Ultravisual | Interactive Developer
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Hammersmith+One&v1")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="css/content.css")
+    body
+            #container
+                header
+                    img(src="imgs/head_text.jpg")
+                section
+                    nav#top_nav
+                        ul
+                            li
+                                a(href="/") Home
+                            li  
+                                a(href="/about") About
+                            li
+                                a(href="/cv") CV
+                            li
+                                a(href="/contact") Contact
+                #main
+                    block content
+                    ul.box
+                        li#last
+                            #twitter_left
+                                h3 Twitter
+                                a(href="http://twitter.com/#!/ultravisual") 
+                                    #twitter_icon
+                            #twitter_right
+                                h3 
+                                    a(href="http://twitter.com/#!/ultravisual") @UltraVisual's recent tweets
+                                #tweets
+            .clearfix
+            footer
+                .footer_container
+                    div
+                        h3 Contact Details
+                        p
+                            a(href="http://twitter.com/#!/ultravisual") @UltraVisual on Twitter
+                        p
+                            a(href="http://www.linkedin.com/profile/view?id=40248523") Shane Johnson on LinkedIn
+                        p
+                            a(href="https://github.com/ultravisual") Shane Johnson on Github
+                        p
+                            a(href="https://medium.com/@shane.johnson") Shane on Medium
+            script(src="http://code.jquery.com/jquery-1.12.4.min.js")
+            script(src="/js/script.js")
+
+
+                        

@@ -1,0 +1,12 @@
+options:
+  docker: true
+
+pipelines:
+  default:
+    - step:
+        script:
+          - docker build -t $DOCKER_REPO/$ARTIFACT:latest .
+          - docker login repo.treescale.com --username  $TREESCALE_USERNAME --password $TREESCALE_PASSWORD
+          - docker tag $DOCKER_REPO/$ARTIFACT:latest $DOCKER_REPO/$ARTIFACT:0.0.$BITBUCKET_COMMIT
+          - docker push $DOCKER_REPO/$ARTIFACT:latest
+          - docker push $DOCKER_REPO/$ARTIFACT:0.0.$BITBUCKET_COMMIT
