@@ -1,22 +1,19 @@
 {
   "name": "ultravisual-site",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "Ultravisual static site",
   "main": "index.js",
+  "repository": "git@bitbucket.org:ultravisual/ultravisual-site.git",
+  "author": "shanej@ultravisual.co.uk",
   "license": "MIT",
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "^5.0.0-alpha.8",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "serve": "node index.js"
+  },
+  "dependencies": {
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.2",
+    "jade": "^1.11.0",
+    "markdown-serve": "^0.5.0",
+    "morgan": "^1.9.0"
   }
 }
