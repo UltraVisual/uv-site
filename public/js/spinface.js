@@ -4,7 +4,8 @@ class Face {
 		this.bounds = bounds;
 		this._x = x;
 		this._y = y;
-		this.setVelocity();
+		this.vx = (Math.random() * 5);
+		this.vy = (Math.random() * 5);
 		this.ctx = ctx;
 		this.img = new Image();
 		this.img.addEventListener('load', () => {
@@ -12,11 +13,6 @@ class Face {
 			this.draw(x, y);
 		});
 		this.img.src = '/imgs/face.png';
-	}
-
-	setVelocity() {
-		this.vx = (Math.random() * 5);
-		this.vy = (Math.random() * 5);
 	}
 
 	draw () {
@@ -34,11 +30,6 @@ class Face {
 
 			this.checkBounds();
 		}
-	}
-
-	clear() {
-		this.setVelocity();
-		this.ctx.clearRect(0, 0, this.bounds.width, this.bounds.height);
 	}
 
 	checkBounds() {
@@ -70,11 +61,14 @@ var getCanvas = function () {
 	resizeCanvas(canvas);
 
 	return canvas;
+}
 
+var createNewFace = function () {
+	return new Face({ x: canvas.width, y: canvas.height }, canvas.getContext('2d'), 0, 0)
 }
 
 var canvas = getCanvas();
-var face = new Face({ x: canvas.width, y: canvas.height }, canvas.getContext('2d'), 0, 0);
+var face = createNewFace();
 
 var run = function () {
 	face.draw();
@@ -82,8 +76,9 @@ var run = function () {
 }
 
 window.addEventListener('resize', () => {
-	face.clear();
 	resizeCanvas(canvas);
+	
+	face = createNewFace();
 });
 
 requestAnimationFrame(run);
