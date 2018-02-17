@@ -93,10 +93,6 @@ a:hover, a:active {
     outline: none;
 }
 
-ul, ol {
-    margin-left: 2em;
-}
-
 ol {
     list-style-type: decimal;
 }

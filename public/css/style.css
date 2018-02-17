@@ -1,10 +1,6 @@
 
 @import url('./basic.css');
 
-html {
-    padding-top: 20px;
-}
-
 #hidden_content {
     display: none;
 }
@@ -83,9 +79,9 @@ html {
     transition: opacity 1s ease-in-out;
 }
 
-ul.box {
+/* ul.box {
     margin-left: 1.3em;
-}
+} */
 
 ul.box img {
     position: absolute;
@@ -107,12 +103,13 @@ ul.box img:hover {
 ul.box li {
     position: relative;
     list-style: none;
-    float: left;
     width: 390px;
     min-height: 200px;
     padding: 10px;
     border: 1px solid #efefef;
-    margin: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     background: #fff;
     display: block;
 }
@@ -275,11 +272,11 @@ td input, td textarea {
     }
 
     #twitter_left {
-        width: 35%;
+        width: 30%;
     }
 
     #twitter_right{ 
-        width: 55%;
+        width: 60%;
     }
 
     .footer_container {
@@ -289,24 +286,34 @@ td input, td textarea {
     ul.box {
         margin-left: 0;
     }
+
+    #main {
+        padding-bottom: 35px !important;
+    }
 }
 
-@media all and (max-width: 460px) {
+@media all and (min-width: 471px) and (max-width: 620px) {
     #twitter_left {
-        float: none;
+        width: 35%;
     }
 
     #twitter_right{ 
-        float: none;
-        width: 88%;
+        float: left;
+        width: 58%;
+    }
+}
+
+@media all and (max-width: 470px) {
+    #twitter_left {
+        display: none
     }
 
-    #last {
-        margin: 0;
+    #twitter_right{ 
+        width: 90%;
     }
 
-    ul.box {
-        margin-left: 1.3em;
+    #main {
+        padding-bottom: 15px !important;
     }
 }
 

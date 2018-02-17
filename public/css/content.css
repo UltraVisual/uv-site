@@ -215,11 +215,11 @@ input
 	position: relative;
 }
 
-header
-{
+header {
     width: 99%;
     height: 59px;
     margin: 0 auto 0;
+    margin-top: 20px;
     border: 1px #4b26be solid;
     background: url("/imgs/header.jpg") repeat-x;
 }
@@ -249,9 +249,6 @@ p
 	margin: 0 -240px 0 0;
 	width: 100%;
     height: 100%;
-    /*padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #ffffff;*/
 }
 
 #shadow_container
@@ -326,7 +323,7 @@ footer div h3
 #main
 {
     padding-top: 30px;
-    padding-bottom: 125px;
+    padding-bottom: 45px;
 }
 
 
