@@ -3,7 +3,12 @@ draft: false
 published: 2014-04-01 12:40:00
 layout: guide
 ---
-![Shane Johnson](/imgs/about-me.jpg)
+<picture>
+ <source srcset="/imgs/about-me.jpg" media="(min-width: 930px)">
+ <source srcset="/imgs/about-me-sml.jpg" media="(min-width: 421px) and (max-width: 930px)">
+ <source srcset="/imgs/about-me-smlr.jpg" media="(max-width: 420px)">
+ <img src="/imgs/about-me.jpg" alt="about-me">
+</picture>
 
 Originally from a fine art background, it took me a while to get into the world of digital media, but as soon as I did, Flash became my tool of choice. For the last five years I have been working as a freelance Flash designer / developer and I now work as an Interactive Software Engineer for a well-known online gaming company and  create engaging and creative applications for the web with primarily Javascript, but also any medium that I feel is the right tool to do the job.
 

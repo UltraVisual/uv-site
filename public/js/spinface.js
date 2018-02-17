@@ -1,11 +1,10 @@
 class Face {
 	constructor(bounds, ctx, x, y) {
-		this._x = x;
-		this._y = y;
 		this._rotation = 0;
 		this.bounds = bounds;
-		this.vx = (Math.random() * 5);
-		this.vy = (Math.random() * 5);
+		this._x = x;
+		this._y = y;
+		this.setVelocity();
 		this.ctx = ctx;
 		this.img = new Image();
 		this.img.addEventListener('load', () => {
@@ -13,6 +12,11 @@ class Face {
 			this.draw(x, y);
 		});
 		this.img.src = '/imgs/face.png';
+	}
+
+	setVelocity() {
+		this.vx = (Math.random() * 5);
+		this.vy = (Math.random() * 5);
 	}
 
 	draw () {
@@ -32,6 +36,11 @@ class Face {
 		}
 	}
 
+	clear() {
+		this.setVelocity();
+		this.ctx.clearRect(0, 0, this.bounds.width, this.bounds.height);
+	}
+
 	checkBounds() {
 		if(this._y >= this.bounds.y || this._y <= 0) {
 			this.vy = -this.vy;
@@ -42,12 +51,39 @@ class Face {
 		}
 	}
 }
-var canvas = document.querySelector('canvas');
+
+var resizeCanvas = function (canvas) {
+	var width = screen.width;
+	var height = 500;
+
+	if (width > 930) {
+		width = 930;
+	}
+
+	canvas.width = width;
+	canvas.height = height;
+}
+
+var getCanvas = function () {
+	var canvas = document.querySelector('canvas')
+	
+	resizeCanvas(canvas);
+
+	return canvas;
+
+}
+
+var canvas = getCanvas();
 var face = new Face({ x: canvas.width, y: canvas.height }, canvas.getContext('2d'), 0, 0);
 
 var run = function () {
 	face.draw();
 	requestAnimationFrame(run);
 }
+
+window.addEventListener('resize', () => {
+	face.clear();
+	resizeCanvas(canvas);
+});
 
 requestAnimationFrame(run);

@@ -5,5 +5,5 @@ published: 2014-04-01 12:40:00
 layout: guide
 ---
 
-<canvas width="930" height="500"></canvas>
+<canvas></canvas>
 <script src="/js/spinface.js"></script>
