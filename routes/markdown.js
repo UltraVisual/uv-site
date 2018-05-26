@@ -6,13 +6,10 @@ exports.handler = function(req, res, next) {
 
     var rootDir = path.resolve(__dirname, '../pages');
 
-    console.log(rootDir)
-
     var markdownServer = new server.MarkdownServer(rootDir); 
 
     markdownServer.get(req.path, function(err, result) {
         if (err) {
-            console.log(err);
             next();
             return;
         }
